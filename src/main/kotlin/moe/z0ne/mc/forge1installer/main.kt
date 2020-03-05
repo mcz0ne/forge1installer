@@ -1,4 +1,4 @@
-package mc.z0ne.moe.forge1installer
+package moe.z0ne.mc.forge1installer
 
 import ch.qos.logback.classic.Level
 import ch.qos.logback.classic.LoggerContext
@@ -7,6 +7,7 @@ import ch.qos.logback.classic.spi.ILoggingEvent
 import ch.qos.logback.core.ConsoleAppender
 import com.google.common.base.Predicate
 import net.minecraftforge.installer.InstallerAction
+import net.minecraftforge.installer.ServerInstall
 import net.minecraftforge.installer.VersionInfo
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
@@ -63,5 +64,7 @@ fun main(args: Array<String>) {
         }
     }
 
+    // disable download progress bar
+    ServerInstall.headless = true
     InstallerAction.CLIENT.run(target, optPred)
 }

@@ -1,4 +1,4 @@
-package mc.z0ne.moe.forge1installer
+package moe.z0ne.mc.forge1installer
 
 import net.minecraftforge.installer.OptionalLibrary
 
